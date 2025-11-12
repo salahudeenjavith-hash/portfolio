@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Salahudeen Javith — Joinery Draftsman & CNC Programmer</title>
-  <meta name="description" content="Joinery Draftsman & CNC Programmer. Production drawings, CNC programming, cut lists, furniture design and fit-out production." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -12,14 +11,13 @@
       --maxw:1100px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#071021 0%, #081426 100%); color:#e6eef6}
+    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#071021 0%, #081426 100%); color:#e6eef6}
     a{color:var(--accent);text-decoration:none}
     .container{max-width:var(--maxw);margin:40px auto;padding:28px}
 
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
     .brand{display:flex;gap:14px;align-items:center}
     .logo{width:60px;height:60px;border-radius:8px;background:linear-gradient(135deg,#0ea5a5,#5eead4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042029}
-    .name{line-height:1}
     .name h1{margin:0;font-size:18px}
     .name p{margin:0;color:var(--muted);font-size:13px}
 
@@ -30,229 +28,158 @@
     .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;padding:26px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);box-shadow:0 6px 22px rgba(2,6,23,0.6)}
     .intro h2{margin:0 0 8px 0;font-size:22px}
     .intro p{margin:0 0 16px;color:var(--muted);line-height:1.5}
-    .cta{display:flex;gap:12px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
     .btn{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#042029;padding:10px 14px;border-radius:8px;font-weight:600}
     .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#e6eef6}
-
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:10px}
-    .meta{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
-    .meta strong{color:#fff}
-
-    section{margin-top:24px}
-    h3{margin:6px 0 12px 0;font-size:16px}
 
     .skills{display:flex;flex-wrap:wrap;gap:8px}
     .skill{padding:8px 10px;background:var(--glass);border-radius:8px;font-size:13px;color:var(--muted)}
 
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    section{margin-top:24px}
+    h3{margin:6px 0 12px 0;font-size:16px}
 
     .experience .item{margin-bottom:14px;padding:12px;border-radius:8px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
     .item h4{margin:0;font-size:14px}
     .item .sub{font-size:13px;color:var(--muted);margin-bottom:6px}
     .item ul{margin:8px 0 0 18px;color:var(--muted)}
 
-    .education .edu{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:8px;background:var(--card);margin-bottom:8px}
-    .edu small{color:var(--muted)}
-
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
     .proj{padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);transition:transform .18s}
     .proj:hover{transform:translateY(-6px)}
     .proj .p-title{font-weight:600}
-    .proj p{margin:8px 0 0 0;color:var(--muted);font-size:13px}
+    .proj p{margin:8px 0 12px 0;color:var(--muted);font-size:13px}
+    .download-btn{display:inline-block;padding:8px 12px;border-radius:6px;background:var(--accent);color:#042029;font-size:13px;font-weight:600;transition:background .2s}
+    .download-btn:hover{background:#5eead4}
+
+    .education .edu{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:8px;background:var(--card);margin-bottom:8px}
+    .edu small{color:var(--muted)}
+
+    .contact-card{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;background:var(--card);padding:18px;border-radius:8px}
 
     footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted);font-size:13px}
 
-    /* simple animations */
     .fade-in{opacity:0;transform:translateY(10px);animation:fadeIn .6s forwards}
-    .delay-1{animation-delay:.08s} .delay-2{animation-delay:.16s} .delay-3{animation-delay:.24s}
     @keyframes fadeIn{to{opacity:1;transform:none}}
 
-    /* responsive */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}
-      nav{display:none}
-    }
+    @media(max-width:880px){.hero{grid-template-columns:1fr;}nav{display:none}}
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="fade-in">
-      <div class="brand">
-        <div class="logo">SJ</div>
-        <div class="name">
-          <h1>Salahudeen Javith</h1>
-          <p>Joinery Draftsman & CNC Programmer</p>
-        </div>
+<div class="container">
+  <header class="fade-in">
+    <div class="brand">
+      <div class="logo">SJ</div>
+      <div class="name">
+        <h1>Salahudeen Javith</h1>
+        <p>Joinery Draftsman & CNC Programmer</p>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero card fade-in delay-1">
-        <div class="intro">
-          <h2>Hi — I’m a joinery draftsman & CNC programmer based in Dubai.</h2>
-          <p>I turn design ideas into accurate production drawings, material cut lists, and CNC programs that help teams fabricate furniture and fit-outs efficiently. I work across custom furniture, joinery detailing and site fit-out coordination from concept to installation.</p>
-          <div class="cta">
-            <a class="btn" href="#contact">Contact Me</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/salahudeenjavith" target="_blank" rel="noopener">View LinkedIn</a>
-          </div>
-          <div style="margin-top:14px;color:var(--muted);font-size:13px">
-            Jebel Ali Industrial Area, Dubai • +971 52 822 9950 • salahudeenjavith@gmail.com
-          </div>
-        </div>
-        <aside class="card" style="height:100%">
-          <div class="meta">
-            <div><strong>Key Skills</strong></div>
-            <div class="skills">
-              <div class="skill">AutoCAD</div>
-              <div class="skill">ArtCAM</div>
-              <div class="skill">3ds Max</div>
-              <div class="skill">SketchUp</div>
-              <div class="skill">V-Ray</div>
-              <div class="skill">CNC programming</div>
-              <div class="skill">Cut lists & Material take-off</div>
-              <div class="skill">Production drawings</div>
-            </div>
-          </div>
-        </aside>
-      </section>
+  <section class="hero card fade-in">
+    <div class="intro">
+      <h2>Hi — I’m a joinery draftsman & CNC programmer based in Dubai.</h2>
+      <p>I turn design ideas into accurate production drawings, material cut lists, and CNC programs that help teams fabricate furniture and fit-outs efficiently.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Contact Me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/salahudeenjavith" target="_blank">View LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-      <section id="about" class="fade-in delay-2">
-        <h3>About</h3>
-        <div class="card">
-          <p>I’m a joinery draftsman and CNC programmer with a strong background in furniture design, joinery production, and fit-out manufacturing. I enjoy turning design ideas into accurate production drawings, material cut lists, and CNC programs that help bring projects to life efficiently. I take pride in attention to detail, problem-solving, and making sure every piece is both functional and visually perfect. I’m always eager to learn, grow, and contribute my technical and creative skills to innovative interior and joinery projects.</p>
-        </div>
-      </section>
+  <section id="about" class="fade-in">
+    <h3>About</h3>
+    <div class="card">
+      <p>I’m a joinery draftsman and CNC programmer with experience in furniture design, joinery production, and fit-out manufacturing. I enjoy turning design ideas into accurate production drawings, material cut lists, and CNC programs that help bring projects to life efficiently.</p>
+    </div>
+  </section>
 
-      <section id="experience" class="fade-in delay-3">
-        <h3>Experience</h3>
-        <div class="experience">
-          <div class="item">
-            <h4>Palm Living Interior — Joinery Draftsman & CNC Programmer</h4>
-            <div class="sub">April 2025 — Present • Dubai</div>
-            <ul>
-              <li>Prepare detailed production and shop drawings for custom furniture and joinery works.</li>
-              <li>Develop CNC programs and cut lists for efficient manufacturing.</li>
-              <li>Coordinate with design and production teams to ensure accurate and timely execution.</li>
-              <li>Review materials and optimize sheet usage to reduce waste.</li>
-            </ul>
-          </div>
+  <section id="experience" class="fade-in">
+    <h3>Experience</h3>
+    <div class="experience">
+      <div class="item">
+        <h4>Palm Living Interior — Joinery Draftsman & CNC Programmer</h4>
+        <div class="sub">April 2025 – Present • Dubai</div>
+      </div>
+      <div class="item">
+        <h4>Hats Interior Decoration — CNC Programmer & CAD Designer</h4>
+        <div class="sub">July 2023 – April 2025 • Dubai</div>
+      </div>
+      <div class="item">
+        <h4>KYB Motorcycle Suspension Pvt. Ltd. — Quality Assurance Technician</h4>
+        <div class="sub">Nov 2020 – Mar 2023 • Chennai, India</div>
+      </div>
+    </div>
+  </section>
 
-          <div class="item">
-            <h4>Hats Interior Decoration — CNC Programmer & CAD Designer</h4>
-            <div class="sub">July 2023 — April 2025 • Dubai</div>
-            <ul>
-              <li>Designed and prepared 2D CAD models and shop drawings for furniture and joinery.</li>
-              <li>Produced technical drawings, material lists, and assembly instructions for manufacturing.</li>
-              <li>Assisted in material and finishing selection to enhance final product aesthetics.</li>
-              <li>Operated CNC router machines (2D & 3D) for MDF, plywood and solid wood.</li>
-            </ul>
-          </div>
+  <section id="projects" class="fade-in">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="proj">
+        <div class="p-title">Showroom Joinery & Storage System</div>
+        <p>Complete production drawings and CNC programming for a showroom storage area with mirror and marble sections.</p>
+        <a href="https://github.com/yourrepo/showroom-joinery" class="download-btn" download>Download Files</a>
+      </div>
+      <div class="proj">
+        <div class="p-title">Custom Reception Desk</div>
+        <p>Detailed shop drawings and CNC cut lists for a reception desk with veneer and laminate finishes.</p>
+        <a href="https://github.com/yourrepo/reception-desk" class="download-btn" download>Download Files</a>
+      </div>
+      <div class="proj">
+        <div class="p-title">Fit-out Cabinetry</div>
+        <p>Production drawings and CNC programs for built-in cabinetry in a commercial fit-out project.</p>
+        <a href="https://github.com/yourrepo/fitout-cabinetry" class="download-btn" download>Download Files</a>
+      </div>
+      <div class="proj">
+        <div class="p-title">Wardrobe Design Set</div>
+        <p>Design, detailing, and CNC toolpath generation for a modular wardrobe series with sliding doors.</p>
+        <a href="https://github.com/yourrepo/wardrobe-design" class="download-btn" download>Download Files</a>
+      </div>
+      <div class="proj">
+        <div class="p-title">Kitchen Cabinet Layout</div>
+        <p>Layout, cut list, and CNC routing programs for a custom kitchen cabinetry system with soft-close fittings.</p>
+        <a href="https://github.com/yourrepo/kitchen-cabinet" class="download-btn" download>Download Files</a>
+      </div>
+    </div>
+  </section>
 
-          <div class="item">
-            <h4>KYB Motorcycle Suspension Pvt. Ltd. — Quality Assurance Technician</h4>
-            <div class="sub">Nov 2020 — Mar 2023 • Chennai, India</div>
-            <ul>
-              <li>Conducted inspections and tests on suspension components to meet quality standards.</li>
-              <li>Prepared technical documentation and quality reports.</li>
-              <li>Ensured compliance with design and safety specifications.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+  <section id="education" class="fade-in">
+    <h3>Education</h3>
+    <div class="education">
+      <div class="edu">
+        <div><strong>Diploma in Interior Design</strong><br><small>Ediox Training Institute, Dubai</small></div>
+        <small>Nov 2023 – Present</small>
+      </div>
+      <div class="edu">
+        <div><strong>Diploma in Mechanical Engineering</strong><br><small>Srinivasa Polytechnic College, Puthur</small></div>
+        <small>Jul 2017 – Mar 2020</small>
+      </div>
+    </div>
+  </section>
 
-      <section id="projects" class="fade-in">
-        <h3>Projects</h3>
-        <div class="projects">
-          <div class="proj">
-            <div class="p-title">Showroom Joinery & Storage System</div>
-            <p>Complete production drawings and CNC programming for an L-shaped showroom storage area including mirror and marble storage sections, optimized for material usage.</p>
-          </div>
+  <section id="contact" class="fade-in">
+    <h3>Contact</h3>
+    <div class="contact-card">
+      <div>
+        <p>Email: <a href="mailto:salahudeenjavith@gmail.com">salahudeenjavith@gmail.com</a></p>
+        <p>Phone: <a href="tel:+971528229950">+971 52 822 9950</a></p>
+        <p>Location: Jebel Ali Industrial Area, Dubai</p>
+      </div>
+      <div style="text-align:center;">
+        <p>LinkedIn</p>
+        <a class="btn" href="https://www.linkedin.com/in/salahudeenjavith" target="_blank">View Profile</a>
+      </div>
+    </div>
+  </section>
 
-          <div class="proj">
-            <div class="p-title">Custom Reception Desk</div>
-            <p>Designed and produced detailed shop drawings and CNC cut lists for a reception desk with veneer and laminate finishes; supervised production handover.</p>
-          </div>
-
-          <div class="proj">
-            <div class="p-title">Fit-out Cabinetry</div>
-            <p>Prepared production drawings and managed CNC programs for built-in cabinetry used in a commercial fit-out project, ensuring accurate onsite installation.</p>
-          </div>
-        </div>
-        <p style="margin-top:10px;color:var(--muted);font-size:13px">*Replace these project descriptions with your real project names, dates and images when you are ready.</p>
-      </section>
-
-      <section id="education" class="fade-in">
-        <h3>Education</h3>
-        <div class="education">
-          <div class="edu">
-            <div>
-              <strong>Diploma in Interior Design</strong><br>
-              <small>Ediox Training Institute, Dubai</small>
-            </div>
-            <small>Nov 2023 — Present</small>
-          </div>
-
-          <div class="edu">
-            <div>
-              <strong>Diploma in Mechanical Engineering</strong><br>
-              <small>Srinivasa Polytechnic College, Puthur</small>
-            </div>
-            <small>Jul 2017 — Mar 2020</small>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="fade-in" style="margin-top:18px">
-        <h3>Contact</h3>
-        <div class="card grid-2">
-          <div>
-            <p style="margin:0 0 8px 0">Email: <a href="mailto:salahudeenjavith@gmail.com">salahudeenjavith@gmail.com</a></p>
-            <p style="margin:0 0 8px 0">Phone: <a href="tel:+971528229950">+971 52 822 9950</a></p>
-            <p style="margin:0">Location: Jebel Ali Industrial Area, Dubai</p>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:flex-end">
-            <div style="text-align:right">
-              <p style="margin:0 0 6px 0">LinkedIn</p>
-              <a class="btn" href="https://www.linkedin.com/in/salahudeenjavith" target="_blank">View profile</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      Built by Salahudeen • CV & portfolio content updated 2025
-    </footer>
-  </div>
-
-  <script>
-    // smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        e.preventDefault();
-        const target=document.querySelector(this.getAttribute('href'));
-        if(!target) return window.scrollTo({top:0,behavior:'smooth'});
-        target.scrollIntoView({behavior:'smooth',block:'start'});
-      })
-    })
-
-    // small JS touch: reveal on scroll
-    const observer=new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('visible');
-        }
-      })
-    },{threshold:0.12});
-    document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
-  </script>
+  <footer>Built by Salahudeen • Updated 2025</footer>
+</div>
 </body>
 </html>
